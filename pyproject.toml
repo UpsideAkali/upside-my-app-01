@@ -1,0 +1,20 @@
+[project]
+name = "upside-my-app-01"
+version = "0.1.0"
+description = "Devops demo API"
+requires-python = ">=3.12,<3.13"
+dependencies = [
+    "fastapi==0.115.12",
+    "uvicorn[standard]==0.34.0",
+    "pydantic==2.4.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest==9.0.3",
+    "httpx==0.28.1",
+    "pytest-asyncio>=1.0.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
